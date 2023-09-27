@@ -82,7 +82,6 @@ if __name__ == "__main__":
         elif 'open stackoverflow' in query:
             webbrowser.open("stackoverflow.com")   
 
-
         elif 'play music' in query:
             music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
             songs = os.listdir(music_dir)
@@ -96,14 +95,3 @@ if __name__ == "__main__":
         elif 'open code' in query:
             codePath = "C:\\Users\\Haris\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
-
-        elif 'email to friend' in query:
-            try:
-                speak("What should I say?")
-                content = takeCommand()
-                to = "...@gmail.com"    
-                sendEmail(to, content)
-                speak("Email has been sent!")
-            except Exception as e:
-                print(e)
-                speak("Sorry my friend. I am not able to send this email")    
